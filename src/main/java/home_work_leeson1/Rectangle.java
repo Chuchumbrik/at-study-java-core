@@ -2,16 +2,16 @@ package home_work_leeson1;
 
 public class Rectangle {
 
-    double square(int width, int height) {
+    double getSquare(int width, int height) {
         return width*height;
     }
 
-    double perimeter(int width, int height) {
+    double getPerimeter(int width, int height) {
         return (2*(width+height));
     }
 
     boolean checkSquareGreatPerimeter(int width, int height){
-        return square(width, height) > perimeter(width, height);
+        return getSquare(width, height) > getPerimeter(width, height);
     }
 
     public static void main(String[] args) {
