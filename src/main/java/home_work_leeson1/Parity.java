@@ -3,7 +3,7 @@ package home_work_leeson1;
 public class Parity {
 
     boolean checkParityNumber(int number){
-        return number%2 == 1;
+        return number % 2 == 1;
     }
 
     public static void main(String[] args) {
