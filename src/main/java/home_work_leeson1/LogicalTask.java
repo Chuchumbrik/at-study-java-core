@@ -12,16 +12,9 @@ public class LogicalTask {
 
     public static void main(String[] args) {
         LogicalTask logicalTask = new LogicalTask();
-        System.out.println(logicalTask.logicalOrInverted(false, false));
-        System.out.println(logicalTask.logicalInvertedAnd(false, false));
-
-        System.out.println(logicalTask.logicalOrInverted(false, true));
-        System.out.println(logicalTask.logicalInvertedAnd(false, true));
-
-        System.out.println(logicalTask.logicalOrInverted(true, false));
-        System.out.println(logicalTask.logicalInvertedAnd(true, false));
-
-        System.out.println(logicalTask.logicalOrInverted(true, true));
-        System.out.println(logicalTask.logicalInvertedAnd(true, true));
+        System.out.println(logicalTask.logicalOrInverted(false, false) + " " + logicalTask.logicalInvertedAnd(false, false));
+        System.out.println(logicalTask.logicalOrInverted(false, true) + " " + logicalTask.logicalInvertedAnd(false, true));
+        System.out.println(logicalTask.logicalOrInverted(true, false) + " " + logicalTask.logicalInvertedAnd(true, false));
+        System.out.println(logicalTask.logicalOrInverted(true, true) + " " + logicalTask.logicalInvertedAnd(true, true));
     }
 }
