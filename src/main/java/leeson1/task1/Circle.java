@@ -1,4 +1,4 @@
-package home_work_leeson1;
+package leeson1.task1;
 
 //Задание № 1
 public class Circle {

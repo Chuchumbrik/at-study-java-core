@@ -1,4 +1,4 @@
-package home_work_lesson2;
+package lesson2.task1;
 
 public class ConnectingTextOutput {
 

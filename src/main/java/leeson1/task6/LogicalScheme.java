@@ -1,4 +1,4 @@
-package home_work_leeson1;
+package leeson1.task6;
 
 public class LogicalScheme {
 
