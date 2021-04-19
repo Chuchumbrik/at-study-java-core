@@ -13,18 +13,17 @@ public class IdenticalCharacters {
     }
 
     String makingStringOfIdenticalCharacters(String stringFirst, String stringSecond){
-        StringBuilder result = new StringBuilder();
-        String test;
+        String result = "", test;
         for (int i = 0; i < stringFirst.length(); i++) {
             for (int j = 0; j < stringSecond.length(); j++) {
                 if (stringFirst.charAt(i) == stringSecond.charAt(j)){
                     test = stringFirst.charAt(i) + "";
-                    if (!result.toString().contains(test))
-                        result.append(stringFirst.charAt(i));
+                    if (!result.contains(test))
+                        result += stringFirst.charAt(i);
                 }
             }
         }
-        char[] tempArray = result.toString().toCharArray();
+        char tempArray[] = result.toCharArray();
         Arrays.sort(tempArray);
         return new String(tempArray);
     }
