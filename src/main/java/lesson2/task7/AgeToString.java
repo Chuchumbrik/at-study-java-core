@@ -1,10 +1,10 @@
 package lesson2.task7;
 
-public class Age {
+public class AgeToString {
     public static void main(String[] args) {
-        Age age = new Age();
+        AgeToString ageToString = new AgeToString();
         int[] ageArray = {32, 52, 66, 82, 25, 44, 60, 75, 22, 119};
-        age.textOutputAge(ageArray);
+        ageToString.textOutputAge(ageArray);
     }
 
     void textOutputAge(int... ages) {
