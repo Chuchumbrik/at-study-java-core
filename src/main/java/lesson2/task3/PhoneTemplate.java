@@ -36,35 +36,21 @@ public class PhoneTemplate {
         if (phone == null || phone.length() != 16)
             return false;
 
-        if (phone.charAt(0) != '+')
+        if (!phone.startsWith("+7("))
             return false;
-        if (phone.charAt(1) != '7')
-            return false;
-
-        if (phone.charAt(2) != '(')
-            return false;
-
         if (phone.charAt(6) != ')')
             return false;
-        if ((phone.charAt(10) != '-') && (phone.charAt(13) != '-'))
+        if ((phone.charAt(10) != '-') || (phone.charAt(13) != '-'))
             return false;
 
-
         int[] idNumbers = {3, 4, 5, 7, 8, 9, 11, 12, 14 , 15};
-        char[] numbers = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-        boolean flagOccurrences = false;
-        for (int i = 0; i < idNumbers.length; i++) {
-            for (int j = 0; j < numbers.length; j++) {
-                if (phone.charAt(idNumbers[i]) == numbers[j]) {
-                    flagOccurrences = true;
-                }
-            }
-            if (!flagOccurrences) {
-                return false;
-            }
-            flagOccurrences = false;
-        }
+        String numbers = "0123456789";
 
+        for (int idNumber : idNumbers) {
+            String symbol = String.valueOf(phone.charAt(idNumber));
+            if (!numbers.contains(symbol))
+                return false;
+        }
 
         return true;
     }
