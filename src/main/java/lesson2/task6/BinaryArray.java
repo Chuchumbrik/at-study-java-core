@@ -1,5 +1,7 @@
 package lesson2.task6;
 
+import java.util.Random;
+
 public class BinaryArray {
     public static void main(String[] args) {
         BinaryArray binaryArray = new BinaryArray();
@@ -7,13 +9,13 @@ public class BinaryArray {
     }
 
     int[][] fillInArray() {
-        int[][] filledArray = new int[(4 + (int) (Math.random() * 3))][(4 + (int) (Math.random() * 3))];
+        int[][] filledArray = new int[new Random().nextInt(7)][new Random().nextInt(7)];
         for (int i = 0; i < filledArray.length; i++){
             for (int j = 0; j < filledArray[i].length; j++){
-                filledArray[i][j] = (int) (Math.random() * 2);
+                filledArray[i][j] = new Random().nextInt(2);
             }
         }
-        filledArray[(1 + (int) (Math.random() * (filledArray.length - 2)))][(1 + (int) (Math.random() * (filledArray[0].length - 2)))] = 2;
+        filledArray[(1 + new Random().nextInt(filledArray.length - 2))][(1 + new Random().nextInt(filledArray[0].length - 2))] = 2;
 
         return filledArray;
     }
@@ -35,13 +37,14 @@ public class BinaryArray {
             for (int j = 0; j < invertArray[i].length; j++){
                 if (invertArray[i][j] == 2) {
                     flag = true;
-                    continue;
-                }
-                if (!flag) { continue; }
-                if (invertArray[i][j] == 1) {
-                    invertArray[i][j] = 0;
-                } else {
-                    invertArray[i][j] = 1;
+                } else if (flag) {
+                    switch (invertArray[i][j]) {
+                        case 0:
+                            invertArray[i][j] = 1;
+                            break;
+                        case 1:
+                            invertArray[i][j] = 0;
+                    }
                 }
             }
         }
