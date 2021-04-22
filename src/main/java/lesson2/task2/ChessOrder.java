@@ -4,9 +4,8 @@ public class ChessOrder {
 
     void printByFor(int[][] binaryArray) {
         for (int i = 0; i < binaryArray.length; i++) {
-            for (int j = 0; j < binaryArray.length; j++) {
+            for (int j = 0; j < binaryArray.length; j++)
                 System.out.print(binaryArray[i][j]);
-            }
             System.out.println();
         }
         System.out.println();
@@ -14,24 +13,22 @@ public class ChessOrder {
 
     void printByWhile(int[][] binaryArray) {
         int i = 0;
-        int j;
+        int j = 0;
         while (i < binaryArray.length) {
-            j = 0;
             while (j < binaryArray.length) {
-                System.out.print(binaryArray[i][j]);
-                j++;
+                System.out.print(binaryArray[i][j++]);
             }
             i++;
+            j = 0;
             System.out.println();
         }
         System.out.println();
     }
 
     void printByForeach(int[][] binaryArray) {
-        for (int[] itemsArray: binaryArray) {
-            for (int item: itemsArray) {
+        for (int[] rowArray: binaryArray) {
+            for (int item: rowArray)
                 System.out.print(item);
-            }
             System.out.println();
         }
         System.out.println();
@@ -42,13 +39,8 @@ public class ChessOrder {
         ChessOrder chessOrder = new ChessOrder();
         int[][] binaryArray = new int[8][8];
         for (int i = 0; i < binaryArray.length; i++) {
-            for (int j = 0; j < binaryArray.length; j++) {
-                if (i % 2 == 1) {
-                    binaryArray[i][j] = (j % 2 == 1) ? 0 : 1;
-                } else {
-                    binaryArray[i][j] = (j % 2 == 0) ? 0 : 1;
-                }
-            }
+            for (int j = 0; j < binaryArray.length; j++)
+                binaryArray[i][j] = (i + j) % 2;
         }
 
         chessOrder.printByFor(binaryArray);
