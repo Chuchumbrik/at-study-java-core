@@ -26,8 +26,8 @@ public class ChessOrder {
     }
 
     void printByForeach(int[][] binaryArray) {
-        for (int[] rowArray: binaryArray) {
-            for (int item: rowArray)
+        for (int[] rowArray : binaryArray) {
+            for (int item : rowArray)
                 System.out.print(item);
             System.out.println();
         }
@@ -42,7 +42,6 @@ public class ChessOrder {
             for (int j = 0; j < binaryArray.length; j++)
                 binaryArray[i][j] = (i + j) % 2;
         }
-
         chessOrder.printByFor(binaryArray);
         chessOrder.printByWhile(binaryArray);
         chessOrder.printByForeach(binaryArray);

@@ -9,7 +9,7 @@ public class PrintA {
     }
 
     void outputQuantityHandlerOptionOne(int... numbers) {
-        for (int number: numbers) {
+        for (int number : numbers) {
             String result = "";
 
             switch (number) {
@@ -17,7 +17,7 @@ public class PrintA {
                 case 2:
                 case 3:
                 case 4:
-                    for (int i = 0; i < number; i++){
+                    for (int i = 0; i < number; i++) {
                         result += "A";
                     }
                     break;
@@ -31,29 +31,7 @@ public class PrintA {
 
     void outputQuantityHandlerOptionTwo(int... numbers) {
 
-//        for (int number: numbers) {
-//            boolean outputFlag = false;
-//            String result = "";
-//
-//            switch (number) {
-//                case 1:
-//                case 2:
-//                case 3:
-//                case 4:
-//                    for (int i = 0; i < number; i++){
-//                        result += "A";
-//                    }
-//                    outputFlag = true;
-//                default:
-//                    if (!outputFlag) {
-//                        result = "AAAAA";
-//                    }
-//            }
-//            System.out.println(result);
-//        }
-//        System.out.println();
-
-        for (int number: numbers) {
+        for (int number : numbers) {
             switch (number) {
                 default:
                     System.out.print("A");

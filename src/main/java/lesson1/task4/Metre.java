@@ -1,9 +1,9 @@
-package leeson1.task4;
+package lesson1.task4;
 
 public class Metre {
 
-    int getQuantityMetre(int length){
-        return length/100;
+    int getQuantityMetre(int length) {
+        return length / 100;
     }
 
     public static void main(String[] args) {

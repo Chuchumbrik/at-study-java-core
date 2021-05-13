@@ -1,8 +1,8 @@
-package leeson1.task3;
+package lesson1.task3;
 
 public class Parity {
 
-    boolean checkParityNumber(int number){
+    boolean checkParityNumber(int number) {
         return number % 2 == 1;
     }
 

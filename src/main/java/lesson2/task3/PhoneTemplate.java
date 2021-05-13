@@ -33,25 +33,29 @@ public class PhoneTemplate {
     }
 
     boolean checkingWithCycles(String phone) {
-        if (phone == null || phone.length() != 16)
+        if (phone == null || phone.length() != 16) {
             return false;
+        }
 
-        if (!phone.startsWith("+7("))
+        if (!phone.startsWith("+7(")) {
             return false;
-        if (phone.charAt(6) != ')')
+        }
+        if (phone.charAt(6) != ')') {
             return false;
-        if ((phone.charAt(10) != '-') || (phone.charAt(13) != '-'))
+        }
+        if ((phone.charAt(10) != '-') || (phone.charAt(13) != '-')) {
             return false;
+        }
 
-        int[] idNumbers = {3, 4, 5, 7, 8, 9, 11, 12, 14 , 15};
+        int[] idNumbers = {3, 4, 5, 7, 8, 9, 11, 12, 14, 15};
         String numbers = "0123456789";
 
         for (int idNumber : idNumbers) {
             String symbol = String.valueOf(phone.charAt(idNumber));
-            if (!numbers.contains(symbol))
+            if (!numbers.contains(symbol)) {
                 return false;
+            }
         }
-
         return true;
     }
 }

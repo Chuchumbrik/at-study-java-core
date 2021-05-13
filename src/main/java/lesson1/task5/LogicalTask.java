@@ -1,12 +1,12 @@
-package leeson1.task5;
+package lesson1.task5;
 
 public class LogicalTask {
 
-    boolean logicalOrInverted(boolean oneBoolean, boolean twoBoolean){
+    boolean logicalOrInverted(boolean oneBoolean, boolean twoBoolean) {
         return !(oneBoolean || twoBoolean);
     }
 
-    boolean logicalInvertedAnd(boolean oneBoolean, boolean twoBoolean){
+    boolean logicalInvertedAnd(boolean oneBoolean, boolean twoBoolean) {
         return !oneBoolean && !twoBoolean;
     }
 

@@ -1,8 +1,8 @@
-package leeson1.task6;
+package lesson1.task6;
 
 public class LogicalScheme {
 
-    boolean getSchemeResult(boolean a, boolean b, boolean c, boolean d){
+    boolean getSchemeResult(boolean a, boolean b, boolean c, boolean d) {
         return (a && b) && !(c || d);
     }
 

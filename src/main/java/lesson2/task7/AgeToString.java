@@ -9,17 +9,14 @@ public class AgeToString {
 
     void textOutputAge(int... ages) {
         String result;
-        for (int age: ages) {
-            if ( age >= 25 && age < 44) {
+        for (int age : ages) {
+            if (age >= 25 && age < 44) {
                 result = "Молодой";
-            } else
-            if ( age >= 44 && age < 60) {
+            } else if (age >= 44 && age < 60) {
                 result = "Средний";
-            } else
-            if ( age >= 60 && age < 75) {
+            } else if (age >= 60 && age < 75) {
                 result = "Пожилой";
-            } else
-            if ( age >= 75 && age < 90) {
+            } else if (age >= 75 && age < 90) {
                 result = "Старческий";
             } else
                 result = "Неизвестный";

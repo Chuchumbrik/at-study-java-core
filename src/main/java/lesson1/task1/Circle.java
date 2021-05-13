@@ -1,11 +1,10 @@
-package leeson1.task1;
+package lesson1.task1;
 
-//Задание № 1
 public class Circle {
     final double PI = 3.14;
 
     double getSquare(int radius) {
-        return radius*radius*PI;
+        return radius * radius * PI;
     }
 
     public static void main(String[] args) {

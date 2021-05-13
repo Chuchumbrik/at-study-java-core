@@ -10,8 +10,8 @@ public class BinaryArray {
 
     int[][] fillInArray() {
         int[][] filledArray = new int[new Random().nextInt(7)][new Random().nextInt(7)];
-        for (int i = 0; i < filledArray.length; i++){
-            for (int j = 0; j < filledArray[i].length; j++){
+        for (int i = 0; i < filledArray.length; i++) {
+            for (int j = 0; j < filledArray[i].length; j++) {
                 filledArray[i][j] = new Random().nextInt(2);
             }
         }
@@ -21,8 +21,8 @@ public class BinaryArray {
     }
 
     void printArray(int[][] printArray) {
-        for (int i = 0; i < printArray.length; i++){
-            for (int j = 0; j < printArray[i].length; j++){
+        for (int i = 0; i < printArray.length; i++) {
+            for (int j = 0; j < printArray[i].length; j++) {
                 System.out.print(printArray[i][j] + " ");
             }
             System.out.println();
@@ -33,8 +33,8 @@ public class BinaryArray {
     void invertArrayAfterValue(int[][] invertArray) {
         printArray(invertArray);
         boolean flag = false;
-        for (int i = 0; i < invertArray.length; i++){
-            for (int j = 0; j < invertArray[i].length; j++){
+        for (int i = 0; i < invertArray.length; i++) {
+            for (int j = 0; j < invertArray[i].length; j++) {
                 if (invertArray[i][j] == 2) {
                     flag = true;
                 } else if (flag) {
