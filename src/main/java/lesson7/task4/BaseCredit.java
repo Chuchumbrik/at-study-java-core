@@ -1,0 +1,34 @@
+package lesson7.task4;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BaseCredit {
+    double amount;
+    double rate;
+    int duration;
+
+    public BaseCredit(double amount, double rate, int duration) {
+        this.amount = amount;
+        this.rate = rate;
+        this.duration = duration;
+    }
+
+    public List<Double> getMonthPayments() {
+        List<Double> graph = new ArrayList<>();
+        for (int i = 0; i < duration; i++) {
+            graph.add(amount / duration);
+        }
+        return graph;
+    }
+
+    public Double calculateOverpayment() {
+        Double amount = 0d;
+        for (Double currentPayment : getMonthPayments()) {
+            amount += currentPayment;
+        }
+        return amount - this.amount;
+    }
+
+
+}
